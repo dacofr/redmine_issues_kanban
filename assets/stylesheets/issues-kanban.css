@@ -99,7 +99,7 @@ div.issue {
     padding: 3px;
     margin: 5px;
 
-    cursor: move;
+/*    cursor: move; Desactivate Drag & Drop Issue */
 
     position: relative;
 

@@ -12,7 +12,8 @@ jQuery.noConflict();
     $(function() {
         $("#issues-kanban").scrollLeft( $('.issue-status:first').width() * 0.9 );
 
-        $(".issue-status").sortable({
+        /* Desactivate Drag & Drop Issue
+	$(".issue-status").sortable({
             items: "div.issue",
             placeholder: 'ui-state-highlight',
             forcePlaceholderSize: true,
@@ -41,6 +42,7 @@ jQuery.noConflict();
                 });
             }
         }).disableSelection();
+	*/
     });
 
 }(jQuery));
