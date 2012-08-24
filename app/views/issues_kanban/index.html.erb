@@ -10,7 +10,7 @@ jQuery.noConflict();
     var authenticity_token_name = <%= request_forgery_protection_token.to_json %>;
 
     $(function() {
-        $("#issues-kanban").scrollLeft( $('.issue-status:first').width() * 0.9 );
+        /* $("#issues-kanban").scrollLeft( $('.issue-status:first').width() * 0.9 ); */
 
         /* Desactivate Drag & Drop Issue
 	$(".issue-status").sortable({

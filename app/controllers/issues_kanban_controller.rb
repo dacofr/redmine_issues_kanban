@@ -11,7 +11,8 @@ class IssuesKanbanController < ApplicationController
   before_filter :find_issues,  :only => [:index]
 
   def index
-    @statuses = IssueStatus.all(:order => "position asc")
+    #@statuses = IssueStatus.all(:order => "position asc")
+    @statuses = IssueStatus.find(:all,:conditions => ["is_closed = false"], :order => "position asc")
 
     @status_estimated_hours = {}
     @statuses.each do |status|
