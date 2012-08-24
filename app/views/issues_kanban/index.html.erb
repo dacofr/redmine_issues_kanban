@@ -67,7 +67,8 @@ jQuery.noConflict();
     <h2 class="title"><%=h status.name %> (<%= @status_estimated_hours[status.id] %> hr)</h2>
 
     <% @assignees.each do |user| %>
-    <%   if user_estimated_hours(user, status) > 0 %>
+    <!-- Use nb issues rather estimated hours, if user_estimated_hours(user, status) > 0 -->
+    <%   if user_issues(user, status).length > 0 %>
     <div class="user-issues user-id-<%=  user ?  user.id : "" %>">
         <h3 class="title"><%= user_section_title(user, status) %></h3>
         <% user_issues(user, status).each do |issue| %>
