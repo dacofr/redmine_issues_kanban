@@ -38,16 +38,18 @@ h3.title {
     margin: 0 5px;
 }
 
+/* fix max to have a scrollbar by issue status
 #content {
     overflow: auto;
 }
+*/
 
 #issues-kanban {
     white-space: nowrap;
     overflow-x: auto;
     margin: 10px 0;
-    height: auto;
-    min-height: 640px;
+    /*height: auto; fix max to have a scrollbar by issue status
+    min-height: 640px;*/
 }
 
 .nav {
@@ -65,7 +67,7 @@ h3.title {
     vertical-align: top;
     white-space: normal;
     height: auto;
-    min-height: 640px;
+    max-height: 720px; /* fix to have a scrollbar by issue status*/
     min-width: 320px;
     width: 20%;
 
